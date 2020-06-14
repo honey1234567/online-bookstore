@@ -8,6 +8,9 @@ import org.springframework.data.rest.core.annotation.RestResource;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
 import in.shreya.onlinebookstore.entity.Book;
-@CrossOrigin("http://localhost:4200")
+@CrossOrigin("http://localhost:4201")
 public interface BookRepository  extends JpaRepository<Book, Long>{
+	@RestResource(path = "categoryid")
+	//Query -seelct * from tbl_book where category_id=id;
+	Page<Book> findByCategoryId(@Param("id") Long id, Pageable pageable);
 }
