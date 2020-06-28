@@ -28,7 +28,7 @@ public class RepositoryConfig implements RepositoryRestConfigurer{
 				.toArray(Class[]::new));
 		config.getCorsRegistry()
 				.addMapping("/**")
-				.allowedOrigins("http://localhost:4200");
+				.allowedOrigins("http://localhost:4201");
 //		config.exposeIdsFor(Book.class);
 	}
 }

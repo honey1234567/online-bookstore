@@ -8,13 +8,13 @@ import { Router } from '@angular/router';
 })
 export class SearchComponent implements OnInit {
 
-  // constructor(private _router: Router) { }
+  constructor(private _router: Router) { }
 
   ngOnInit() {
   }
 
   searchBooks(keyword: string){
     console.log('keyword', keyword);
-    // this._router.navigateByUrl('/search/'+keyword);
+    this._router.navigateByUrl('/search/'+keyword);
   }
 }

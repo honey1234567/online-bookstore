@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-lg-3">
-<!-- 
-    <app-book-category></app-book-category> -->
+
+    <app-book-category></app-book-category>
 
   </div>
   <div class="col-lg-9">
@@ -56,19 +56,18 @@
       <div class="col-md-6">
         
         <!-- client side paging -->
-        <!-- <jw-pagination [items]="books" (changePage)="onChangePage($event)"></jw-pagination> -->
+        <!-- <jw-pagination [items]="books" (changePage)="pageClick($event)" [pageSize]="pageSize"></jw-pagination> -->
 
-        <!-- <ngb-pagination [(page)]="currentPage"
+        <ngb-pagination [(page)]="currentPage"
                         [pageSize]="pageSize" 
                         [collectionSize]="totalRecords"
                         (pageChange)="listBooks()"
                         class="d-flex justify-content-end">
-            <ng-template ngbPaginationFirst>First</ng-template>
+                        <ng-template ngbPaginationFirst>First</ng-template>
             <ng-template ngbPaginationLast>Last</ng-template> 
             <ng-template ngbPaginationPrevious>Prev</ng-template>
             <ng-template ngbPaginationNext>Next</ng-template> 
-                        
-        </ngb-pagination> -->
+        </ngb-pagination>
       </div>
 
     </div>
