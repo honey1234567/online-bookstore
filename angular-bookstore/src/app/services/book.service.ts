@@ -8,9 +8,12 @@ import { Book } from '../common/book';
   providedIn: 'root'
 })
 export class BookService {
-  private baseUrl = "http://localhost:9090/api/v1/books";
-  private categoryUrl = "http://localhost:9090/api/v1/book-category";
-
+  // dev mode url when running through eclipse
+  private baseUrl = "http://localhost:8080/bookstore/api/v1/books";
+  private categoryUrl = "http://localhost:8080/bookstore/api/v1/book-category";
+  // // prod mode url when running throughtomacat server
+  // private baseUrl = "http://localhost:8080/bookstore/books";
+  // private categoryUrl = "http://localhost:8080/bookstore/book-category";
   constructor(private httpClient: HttpClient) { }
   // getBooks(theCategoryId: number): Observable<Book[]>{
   //   const searchUrl = `${this.baseUrl}/search/categoryid?id=${theCategoryId}`;
