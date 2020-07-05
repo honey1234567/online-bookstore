@@ -4,13 +4,15 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { BookCategory} from '../common/book-category';
 import { Book } from '../common/book';
+import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
 export class BookService {
   // dev mode url when running through eclipse
-  private baseUrl = "http://localhost:8080/bookstore/api/v1/books";
-  private categoryUrl = "http://localhost:8080/bookstore/api/v1/book-category";
+  // private baseUrl = "http://localhost:8080/bookstore/api/v1/books";
+private baseUrl =  `${environment.baseUrl}/books`;
+  private categoryUrl = `${environment.baseUrl}/book-category`;
   // // prod mode url when running throughtomacat server
   // private baseUrl = "http://localhost:8080/bookstore/books";
   // private categoryUrl = "http://localhost:8080/bookstore/book-category";
